@@ -10,3 +10,6 @@ https://gocharting.com/terminal?ticker=BITFINEX:BTCUSD&layout=1
 
 Market mechanics explained
 https://bookmap.com/wiki/Market_Mechanics
+
+Crypto/token movements
+https://www.tokenanalyst.io/analytics
