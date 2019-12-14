@@ -13,3 +13,6 @@ https://bookmap.com/wiki/Market_Mechanics
 
 Crypto/token movements
 https://www.tokenanalyst.io/analytics
+
+Hidden orders detection
+https://scalpexindex.com/app
