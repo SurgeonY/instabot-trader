@@ -3,3 +3,5 @@ node_modules
 /coverage
 /pm.stack.js
 /fomo/config.local.js
+npm-debug.log
+.DS_Store

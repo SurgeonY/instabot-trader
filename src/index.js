@@ -30,7 +30,7 @@ if (config.get('notifications.alertOnStartup')) {
 const app = express();
 const url = config.get('server.url');
 const healthCheckUrl = config.get('server.healthCheck');
-const port = parseInt(config.get('server.port'), 10);
+const port = process.env.PORT || parseInt(config.get('server.port'), 10); //taking provided by Heroku first
 const signingMethod = config.get('server.security.signingMethod').toLowerCase();
 const secret = config.get('server.security.secret');
 
@@ -85,19 +85,18 @@ app.get(healthCheckUrl, (req, res) => res.send(''));
 /**
  * Start the server listening for incoming HTTP requests
  */
-var port1 = process.env.PORT || port  //taking provided by Heroku first
-app.listen(port1, (err) => {
+app.listen(port, (err) => {
     if (err) {
-        logger.error(`Failed to start server on port ${port1}`);
+        logger.error(`Failed to start server on port ${port}`);
         logger.error(err);
     } else {
         logger.results('\nServer is listening for commands at');
-        logger.results(`http://localhost:${port1}${url}\n`);
+        logger.results(`http://localhost:${port}${url}\n`);
     }
 }).on('error', (err) => {
     logger.error('Error starting server');
     logger.error(err);
     if (err.errno === 'EADDRINUSE') {
-        logger.error(`The port ${port1} is already in use.`);
+        logger.error(`The port ${port} is already in use.`);
     }
 });
