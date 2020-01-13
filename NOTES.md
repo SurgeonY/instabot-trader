@@ -16,3 +16,10 @@ https://www.tokenanalyst.io/analytics
 
 Hidden orders detection
 https://scalpexindex.com/app
+
+Open interest data by all major exchanges
+https://contractmarketcap.com/
+
+Cold/hot wallets wales
+https://www.youtube.com/watch?v=sJVgLMTgJaI
+https://bitinfocharts.com/top-100-richest-bitcoin-addresses.html
