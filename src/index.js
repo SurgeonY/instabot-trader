@@ -85,6 +85,7 @@ app.get(healthCheckUrl, (req, res) => res.send(''));
 /**
  * Start the server listening for incoming HTTP requests
  */
+port = process.env.PORT || port  //taking provided by Heroku first
 app.listen(port, (err) => {
     if (err) {
         logger.error(`Failed to start server on port ${port}`);
