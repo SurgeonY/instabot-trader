@@ -85,19 +85,19 @@ app.get(healthCheckUrl, (req, res) => res.send(''));
 /**
  * Start the server listening for incoming HTTP requests
  */
-port = process.env.PORT || port  //taking provided by Heroku first
-app.listen(port, (err) => {
+var port1 = process.env.PORT || port  //taking provided by Heroku first
+app.listen(port1, (err) => {
     if (err) {
-        logger.error(`Failed to start server on port ${port}`);
+        logger.error(`Failed to start server on port ${port1}`);
         logger.error(err);
     } else {
         logger.results('\nServer is listening for commands at');
-        logger.results(`http://localhost:${port}${url}\n`);
+        logger.results(`http://localhost:${port1}${url}\n`);
     }
 }).on('error', (err) => {
     logger.error('Error starting server');
     logger.error(err);
     if (err.errno === 'EADDRINUSE') {
-        logger.error(`The port ${port} is already in use.`);
+        logger.error(`The port ${port1} is already in use.`);
     }
 });
