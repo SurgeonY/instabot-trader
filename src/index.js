@@ -79,7 +79,7 @@ app.post(url, (req, res) => {
 /**
  * Health check endpoint (for load balancers)
  */
-app.get(healthCheckUrl, (req, res) => res.send(''));
+app.get(healthCheckUrl, (req, res) => res.send('OK'));
 
 
 /**
