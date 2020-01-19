@@ -30,7 +30,7 @@ if (config.get('notifications.alertOnStartup')) {
 const app = express();
 const url = config.get('server.url');
 const healthCheckUrl = config.get('server.healthCheck');
-const port = process.env.PORT || parseInt(config.get('server.port'), 10); //taking provided by Heroku first
+const port = parseInt(process.env.PORT || config.get('server.port'), 10); //taking provided by Heroku first
 const signingMethod = config.get('server.security.signingMethod').toLowerCase();
 const secret = config.get('server.security.secret');
 
@@ -91,7 +91,8 @@ app.listen(port, (err) => {
         logger.error(err);
     } else {
         logger.results('\nServer is listening for commands at');
-        logger.results(`http://localhost:${port}${url}\n`);
+        hostName = config.util.getEnv('HOSTNAME');
+        logger.results(`http://${hostName}:${port}${url}\n`);
     }
 }).on('error', (err) => {
     logger.error('Error starting server');
