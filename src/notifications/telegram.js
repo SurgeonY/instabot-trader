@@ -150,7 +150,7 @@ class TelegramNotifier {
                 this.exchangeManager.executeMessage(ctx.message.text, config.get('credentials'));
             } else {
                 // Not from a known user, so log something
-                logger.progress('Telegram message from unknown user');
+                logger.warn('Telegram message from unknown user:');
                 logger.dim(ctx.message);
             }
         });

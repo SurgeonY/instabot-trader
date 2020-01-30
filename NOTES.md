@@ -23,3 +23,6 @@ https://contractmarketcap.com/
 Cold/hot wallets wales
 https://www.youtube.com/watch?v=sJVgLMTgJaI
 https://bitinfocharts.com/top-100-richest-bitcoin-addresses.html
+
+Binance Long/Short Ratio! (Best Indicator of all time?)
+https://www.binance.com/en/futures/funding-history/3
