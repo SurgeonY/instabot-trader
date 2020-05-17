@@ -16,7 +16,8 @@ class TelegramNotifier {
         this.safeUser = config.get('telegram.safeUser');
         this.client = null;
         this.exchangeManager = null;
-        this.lastChatId = null;
+        // store chat_id to push messages upon startup not as a reply, TODO use persistence not config
+        this.lastChatId = config.get('telegram.safeChatId'); //null;
     }
 
     /**

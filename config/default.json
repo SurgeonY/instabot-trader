@@ -49,6 +49,7 @@
   "telegram": {
     "botToken": "",
     "safeUser": 0,
+    "safeChatId": 0,
     "shortcuts": [
       { "name": "example", "message": "This is an example message"}
     ]
